@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     buttons.forEach(({ buttonId, messageId }) => {
         const button = document.getElementById(buttonId);
         const message = document.getElementById(messageId);
+        
+        button.style.cursor = 'pointer';
 
         button.addEventListener('click', function() {
             button.style.backgroundColor = 'lightblue';
@@ -23,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         button.addEventListener('dblclick', function() {
             button.style.display = 'none';
+            message.style.display = 'none';
         });
     });
 });
